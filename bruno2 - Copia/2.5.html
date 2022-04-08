@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bruno </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+  .card{
+    height: 500px ;
+    padding-top: 100px;
+  }
+  </style>
+</head>
+<body>
+
+<header>
+
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand"> <h2>Logo</h2></a>
+    </div>
+</nav>
+
+<div class="card">
+    <div class="card-body">
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="2.5.html">Cartão</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="3.html">Boleto</a>
+            </li>
+        </ul>
+
+        <div class="container">
+
+            <nav class="container">
+                <div class="form-floating mb-3">
+                    <input type="numero" class="form-control" id="floatingNumero" placeholder="Numero">
+                    <label for="floatingNumero">Número do cartão</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingNomeImpresso" placeholder="NomeImpresso">
+                    <label for="floatingNomeImpresso">Nome impresso no cartão</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="floatingValidade" placeholder="Validade">
+                    <label for="floatingValidade">Data de validade</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="int" class="form-control" id="floatingCodigoDeSeguranca" placeholder="CodigoDeSeguranca">
+                    <label for="floatingCodigoDeSeguranca">Código de segurança</label>
+                </div>
+            </nav>
+
+            <div class="container">
+                <button class ="btn btn-dark"
+                        onclick="enviar()">Pagar</button>
+            </div>
+
+            <script>
+        const enviar = function(){
+        let floatingNumero = document.getElementById('floatingNumero')
+        let floatingNomeImpresso = document.getElementById('floatingNomeImpresso')
+        let floatingValidade = document.getElementById('floatingValidade')
+        let floatingCodigoDeSeguranca = document.getElementById('floatingCodigoDeSeguranca')
+
+        if(floatingNumero.value == ""){
+          floatingNumero.classList.add('is-invalid')
+        } else{
+          floatingNumero.classList.remove('is-invalid')
+        }
+
+        if(floatingNomeImpresso.value == ""){
+          floatingNomeImpresso.classList.add('is-invalid')
+        } else{
+          floatingNomeImpresso.classList.remove('is-invalid')
+        }
+
+        if(floatingValidade.value == ""){
+          floatingValidade.classList.add('is-invalid')
+        } else{
+          floatingValidade.classList.remove('is-invalid')
+        }
+
+        if(floatingCodigoDeSeguranca.value == ""){
+          floatingCodigoDeSeguranca.classList.add('is-invalid')
+        } else{
+          floatingCodigoDeSeguranca.classList.remove('is-invalid')
+        }
+
+      }
+
+    </script>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <span class="text-muted">Sesi Senai — Isabelle Lopes Schellmann — 3º ano B</span>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

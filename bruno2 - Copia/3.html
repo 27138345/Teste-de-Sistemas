@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bruno </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+  .card{
+    height: 500px ;
+    padding-top: 100px;
+  }
+  </style>
+</head>
+<body>
+
+<header>
+
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand"> <h2>Logo</h2></a>
+    </div>
+</nav>
+
+<div class="card">
+    <div class="card-body">
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="2.5.html">Cartão</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="3.html">Boleto</a>
+            </li>
+            <li class="nav-item">
+
+        </ul>
+
+        <div class="container">
+
+            <nav class="container">
+
+                <div class="form-floating mb-3">
+                    <input type="nomeCompleto" class="form-control" id="floatingNomeCompleto" placeholder="NomeCompleto">
+                    <label for="floatingNomeCompleto">Nome completo</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="rua" class="form-control" id="floatingRua" placeholder="Rua">
+                    <label for="floatingRua">Rua</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="numero" class="form-control" id="floatingNumero" placeholder="Numero">
+                    <label for="floatingNumero">Número</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="bairro" class="form-control" id="floatingBairro" placeholder="Bairro">
+                    <label for="floatingBairro">Bairro</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="cidade" class="form-control" id="floatingCidade" placeholder="Cidade">
+                    <label for="floatingCidade">Cidade</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="cpf" class="form-control" id="floatingCpf" placeholder="Cpf">
+                    <label for="floatingCpf">Cpf</label>
+                </div>
+            </nav>
+
+            <div class="container">
+                <button class ="btn btn-dark"
+                        onclick="enviar()">Pagar</button>
+            </div>
+
+            <script>
+        const enviar = function(){
+        let floatingNomeCompleto = document.getElementById('floatingNomeCompleto')
+        let floatingRua = document.getElementById('floatingRua')
+        let floatingNumero = document.getElementById('floatingNumero')
+        let floatingBairro = document.getElementById('floatingBairro')
+        let floatingCidade = document.getElementById('floatingCidade')
+        let floatingCpf = document.getElementById('floatingCpf')
+
+        if(floatingNomeCompleto.value == ""){
+          floatingNomeCompleto.classList.add('is-invalid')
+        } else{
+          floatingNomeCompleto.classList.remove('is-invalid')
+        }
+
+        if(floatingRua.value == ""){
+          floatingRua.classList.add('is-invalid')
+        } else{
+          floatingRua.classList.remove('is-invalid')
+        }
+
+        if(floatingNumero.value == ""){
+          floatingNumero.classList.add('is-invalid')
+        } else{
+          floatingNumero.classList.remove('is-invalid')
+        }
+
+        if(floatingBairro.value == ""){
+          floatingBairro.classList.add('is-invalid')
+        } else{
+          floatingBairro.classList.remove('is-invalid')
+        }
+
+        if(floatingCidade.value == ""){
+          floatingCidade.classList.add('is-invalid')
+        } else{
+          floatingCidade.classList.remove('is-invalid')
+        }
+
+        if(floatingCpf.value == ""){
+          floatingCpf.classList.add('is-invalid')
+        } else{
+          floatingCpf.classList.remove('is-invalid')
+        }
+
+      }
+
+    </script>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <span class="text-muted">Sesi Senai — Isabelle Lopes Schellmann — 3º ano B</span>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

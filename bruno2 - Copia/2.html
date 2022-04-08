@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bruno </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <style>
+  .card{
+    height: 500px ;
+    padding-top: 100px;
+  }
+  </style>
+</head>
+<body>
+
+    <header>
+
+    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand"> <h2>Logo</h2></a>
+        </div>
+    </nav>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="container">
+                
+    <nav class="container">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingNome" placeholder="Name">
+            <label for="floatingNome">Nome Completo</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingEmail" placeholder="E-mail">
+            <label for="floatingEmail">E-mail</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="telefone" class="form-control" id="floatingTelefone" placeholder="Telefone">
+            <label for="floatingTelefone">Telefone</label>
+          </div>
+
+        <div class="form-floating mb-3">
+            <input type="cpf" class="form-control" id="floatingCpf" placeholder="Cpf">
+            <label for="floatingCpf">Cpf</label>
+        </div>
+    </nav>
+
+    <div class="container">
+        <button class ="btn btn-dark"
+        onclick="enviar()">Enviar</button>
+        <a class="btn btn-dark" href="2.5.html" role="button">Pagar</a>
+    </div>
+  
+    <script>
+        const enviar = function(){
+        let floatingNome = document.getElementById('floatingNome')
+        let floatingTelefone = document.getElementById('floatingTelefone')
+        let floatingEmail = document.getElementById('floatingEmail')
+        let floatingCpf = document.getElementById('floatingCpf')
+  
+        if(floatingNome.value == ""){
+          floatingNome.classList.add('is-invalid')
+        } else{
+          floatingNome.classList.remove('is-invalid')
+        }
+
+        if(floatingTelefone.value == ""){
+          floatingTelefone.classList.add('is-invalid')
+        } else{
+          floatingTelefone.classList.remove('is-invalid')
+        }
+  
+        if(floatingEmail.value == ""){
+          floatingEmail.classList.add('is-invalid')
+        } else{
+          floatingEmail.classList.remove('is-invalid')
+        }
+
+        if(floatingCpf.value == ""){
+          floatingCpf.classList.add('is-invalid')
+        } else{
+          floatingCpf.classList.remove('is-invalid')
+        }
+
+      }
+
+    </script>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class="text-muted">Sesi Senai — Isabelle Lopes Schellmann — 3º ano B</span>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
